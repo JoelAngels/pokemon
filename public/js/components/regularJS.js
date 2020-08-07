@@ -36,7 +36,7 @@ var pokemonDB = [{
 }];
 
 //State
-var gameState = {
+var gameState = { //this is where we keep the information of the user for exmaple "the new character who was chosen was chanramnda and whose character is he battling,does the user want music on,whatever"
   userPokemon: '',
   rivalPokemon: ''
 };
@@ -89,11 +89,15 @@ while (i < pokemonsEl.length) {
     console.log(gameState);
     //user choose attack
 
+
     //cpu health goes down
+
 
     //cpu attacks
 
+
     //user health goes down
+
 
     //rock > Scissors
     //paper > Rock
@@ -105,10 +109,10 @@ while (i < pokemonsEl.length) {
   };
   i++;
 }
-var a = 0;
+var a = 0; //decided to do mine at the bottom
 while (a < attackBtnsEl.length) {
   attackBtnsEl[a].onclick = function () {
-    var attackName = this.dataset.attack;
+    var attackName = this.dataset.attack; //we are getting the name of the attack if its rock paper or scissors
     gameState.currentUserAttack = attackName;
 
     play(attackName, cpuAttack());
